@@ -1,0 +1,152 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 800px;
+  background-image: url(https://s3.amazonaws.com/flipquiz-uploads/users/83743/board-custom-background/1487097258-jeopardy_slot_bg.jpg);
+}
+
+
+.box {
+    height:80px;
+    width: 20%;
+    
+    background-color: #5769C5;
+    display: inline-block;
+    border: 9px solid black;
+    cursor: pointer;
+    }
+
+.heading p  {
+    width: 80%;
+    height: 90px;
+    font-size: 100px;
+    text-align: center;
+    margin-top:20px;
+    margin-left: 130px;
+    font-family: 'gyparody';
+    color:white;
+} 
+
+
+.col-heading {
+    color:white;
+    border: 9px solid black;
+}
+
+section p {
+    text-align: center;
+    font-size: 2.3em;
+    color:yellow;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: -20px;
+    padding-left: -10px;
+    margin-top:  17px;
+    margin-right:-20px;
+    margin-left: 10px;
+}
+
+#modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #293f50;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 55%; 
+    height: 270px;
+}
+
+
+/*******      MODAL CONTENT        ************/
+
+.question {
+    color: #fff;
+}
+
+.option0 {
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;  
+  letter-spacing: .5px;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  margin: 0px 70px 15px 70px;
+}
+
+.option1 {
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: .5px;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  margin: 0px 70px 15px 70px;
+}
+
+.option2 {
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: .5px;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  margin: 0px 70px 15px 70px;
+}
+
+.option3 {
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: .5px;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  margin: 0px 70px 15px 70px;
+}
+
+.option0:hover {
+  color:#a9b2b9;
+}
+
+.option1:hover {
+  color: #a9b2b9
+}
+
+.option2:hover {
+  color: #a9b2b9
+}
+
+.option3:hover {
+  color: #a9b2b9
+}
+
+
+/*******  MODAL RESULTS AFTER EVENT   ********/
+.modal-result {
+    color: #fff;
+}
+
+.answer {
+    color:#fff;
+}
+
+
+#score {
+  color:white;
+  margin-top:30px;
+  font-size:20px;
+}

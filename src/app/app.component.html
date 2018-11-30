@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheet/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Press+Start+2P" rel="stylesheet">
+    <title>Jeopardy</title>
+   
+</head>
+<body>
+  <div class="heading">
+    <p>JEOPARDY</p>
+  </div>
+
+
+    <section>
+        <section>
+            <p class="box col-heading">NBA</p>
+            <p class="box col-heading">NFL</p>
+            <p class="box col-heading">MLB</p>
+            <p class="box col-heading">NHL</p>
+            <p class="box col-heading">MLS</p>
+        </section>
+
+        <section>
+            <p class="box" category="NBA" difficulty="easy">$100</p>
+            <p class="box" category="NFL" difficulty="easy">$100</p>
+            <p class="box" category="MLB" difficulty="easy">$100</p>
+            <p class="box" category="NHL" difficulty="easy">$100</p>
+            <p class="box" category="MLS" difficulty="easy">$100</p>
+        </section>
+
+        <section>
+            <p class="box" category="NBA" difficulty="easyMedium">$200</p>
+            <p class="box" category="NFL" difficulty="easyMedium">$200</p>
+            <p class="box" category="MLB" difficulty="easyMedium">$200</p>
+            <p class="box" category="NHL" difficulty="easyMedium">$200</p>
+            <p class="box" category="MLS" difficulty="easyMedium">$200</p>
+        </section>
+
+
+        <section>
+            <p class="box" category="NBA" difficulty="medium">$300</p>
+            <p class="box" category="NFL" difficulty="medium">$300</p>
+            <p class="box" category="MLB" difficulty="medium">$300</p>
+            <p class="box" category="NHL" difficulty="medium">$300</p>
+            <p class="box" category="MLS" difficulty="medium">$300</p>
+        </section>
+
+        <section> 
+            <p class="box" category="NBA" difficulty="mediumHard">$400</p>
+            <p class="box" category="NFL" difficulty="mediumHard">$400</p>
+            <p class="box" category="MLB" difficulty="mediumHard">$400</p>
+            <p class="box" category="NHL" difficulty="mediumHard">$400</p>
+            <p class="box" category="MLS" difficulty="mediumHard">$400</p>
+        </section>
+
+        <section>
+            <p class="box" category="NBA" difficulty="hard">$500</p>
+            <p class="box" category="NFL" difficulty="hard">$500</p>
+            <p class="box" category="MLB" difficulty="hard">$500</p>
+            <p class="box" category="NHL" difficulty="hard">$500</p>
+            <p class="box" category="MLS" difficulty="hard">$500</p>
+        </section>
+    </section>
+
+    <p id="score"></p>
+     <!-- The Modal -->
+    <div id="modal">
+
+     <!-- Modal content -->
+        <div class="modal-content">
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+
+<router-outlet></router-outlet>
