@@ -1,18 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { JeopardyService } from 'src/jeopardy/jeopardy.service';
+import { QuestionModalComponent } from '../question-modal/question-modal.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    QuestionModalComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule.forRoot()
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    JeopardyService
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [
+    QuestionModalComponent
+  ]
 })
 export class AppModule { }

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  {path: 'test', loadChildren: '../jeopardy/jeopardy.module#JeopardyModule'}
+  {path: '', loadChildren: '../jeopardy/jeopardy.module#JeopardyModule'}
 ];
 
 @NgModule({

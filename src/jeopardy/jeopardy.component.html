@@ -1,4 +1,70 @@
-<p>
-  jeopardy works!
-  <button class="button-2" (click)="onTestGet()">? ? ? ?</button>
-</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="assets/stylesheet/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline|Press+Start+2P" rel="stylesheet">
+    <title>Jeopardy</title>
+   
+</head>
+<body>
+  <div class="heading">
+    <p>JEOPARDY</p>
+  </div>
+
+
+    <section>
+        <section>
+            <p class="box col-heading" style="cursor: default">History</p>
+            <p class="box col-heading" style="cursor: default">Earth</p>
+            <p class="box col-heading" style="cursor: default">Animal</p>
+            <p class="box col-heading" style="cursor: default">Food</p>
+            <p class="box col-heading" style="cursor: default">Television</p>
+        </section>
+
+        <section>
+            <p class="box" category="History" score="100" (click)="onClick('history', 100)">{{tileText["history"][0]}}</p>
+            <p class="box" category="Earth" score="100" (click)="onClick('earth', 100)">{{tileText["earth"][0]}}</p>
+            <p class="box" category="Animal" score="100" (click)="onClick('animal', 100)">{{tileText["animal"][0]}}</p>
+            <p class="box" category="Food" score="100" (click)="onClick('food', 100)">{{tileText["food"][0]}}</p>
+            <p class="box" category="Television" score="100" (click)="onClick('television', 100)">{{tileText["television"][0]}}</p>
+        </section>
+
+        <section>
+            <p class="box" category="History" score="200" (click)="onClick('history', 200)">{{tileText["history"][1]}}</p>
+            <p class="box" category="Earth" score="200" (click)="onClick('earth', 200)">{{tileText["earth"][1]}}</p>
+            <p class="box" category="Animal" score="200" (click)="onClick('animal', 200)">{{tileText["animal"][1]}}</p>
+            <p class="box" category="Food" score="200" (click)="onClick('food', 200)">{{tileText["food"][1]}}</p>
+            <p class="box" category="Television" score="200" (click)="onClick('television', 200)">{{tileText["television"][1]}}</p>
+        </section>
+
+
+        <section>
+            <p class="box" category="History" score="300" (click)="onClick('history', 300)">{{tileText["history"][2]}}</p>
+            <p class="box" category="Earth" score="300" (click)="onClick('earth', 300)">{{tileText["earth"][2]}}</p>
+            <p class="box" category="Animal" score="300" (click)="onClick('animal', 300)">{{tileText["animal"][2]}}</p>
+            <p class="box" category="Food" score="300" (click)="onClick('food', 300)">{{tileText["food"][2]}}</p>
+            <p class="box" category="Television" score="300" (click)="onClick('television', 300)">{{tileText["television"][2]}}</p>
+        </section>
+
+        <section> 
+            <p class="box" category="History" score="400" (click)="onClick('history', 400)">{{tileText["history"][3]}}</p>
+            <p class="box" category="Earth" score="400" (click)="onClick('earth', 400)">{{tileText["earth"][3]}}</p>
+            <p class="box" category="Animal" score="400" (click)="onClick('animal', 400)">{{tileText["animal"][3]}}</p>
+            <p class="box" category="Food" score="400" (click)="onClick('food', 400)">{{tileText["food"][3]}}</p>
+            <p class="box" category="Television" score="400" (click)="onClick('television', 400)">{{tileText["television"][3]}}</p>
+        </section>
+
+        <section>
+            <p class="box" category="History" score="500" (click)="onClick('history', 500)">{{tileText["history"][4]}}</p>
+            <p class="box" category="Earth" score="500" (click)="onClick('earth', 500)">{{tileText["earth"][4]}}</p>
+            <p class="box" category="Animal" score="500" (click)="onClick('animal', 500)">{{tileText["animal"][4]}}</p>
+            <p class="box" category="Food" score="500" (click)="onClick('food', 500)">{{tileText["food"][4]}}</p>
+            <p class="box" category="Television" score="500" (click)="onClick('television', 500)">{{tileText["television"][4]}}</p>
+        </section>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
+
+<router-outlet></router-outlet>

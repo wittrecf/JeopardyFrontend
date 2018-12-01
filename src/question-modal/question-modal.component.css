@@ -1,0 +1,52 @@
+* {
+    cursor: default
+}
+
+.modal-title {
+    text-transform: capitalize;
+}
+
+.grid-item-1 {
+    grid-area: top-left;
+}
+
+.grid-item-2 {
+    grid-area: top-right;
+}
+
+.grid-item-3 {
+    grid-area: bottom-left;
+}
+
+.grid-item-4 {
+    grid-area: bottom-right;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'top-left top-right'
+        'bottom-left bottom-right';
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.grid-container > div {
+    text-align: center;
+    border: solid;
+    padding: 20px 0;
+    font-size: 30px;
+    cursor: pointer
+}
+
+.correct {
+    background-color: rgba(144, 231, 144, 0.76);
+}
+
+.incorrect {
+    background-color: rgba(231, 144, 144, 0.76);
+}
+
+button {
+    cursor: pointer
+}

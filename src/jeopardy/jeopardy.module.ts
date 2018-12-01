@@ -6,7 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { JeopardyComponent } from './jeopardy.component';
 
 const routes: Routes = [
-  {path: 'test2', component: JeopardyComponent}
+  {path: 'game', component: JeopardyComponent},
+  {path: '**', redirectTo: 'game', pathMatch: 'full'}
 ];
 
 export function jeopardyfactory(http: Http){
@@ -14,7 +15,9 @@ export function jeopardyfactory(http: Http){
 }
 
 @NgModule({
-  declarations: [JeopardyComponent],
+  declarations: [
+    JeopardyComponent
+  ],
   imports: [
     CommonModule,
     HttpModule,
