@@ -10,10 +10,9 @@
 <body>
   <div class="heading">
     <p>JEOPARDY</p>
+    <div id="score">Current score: {{score}}</div>
   </div>
-
-
-    <section>
+  <section>
         <section>
             <p class="box col-heading" style="cursor: default">History</p>
             <p class="box col-heading" style="cursor: default">Earth</p>
@@ -37,7 +36,6 @@
             <p class="box" category="Food" score="200" (click)="onClick('food', 200)">{{tileText["food"][1]}}</p>
             <p class="box" category="Television" score="200" (click)="onClick('television', 200)">{{tileText["television"][1]}}</p>
         </section>
-
 
         <section>
             <p class="box" category="History" score="300" (click)="onClick('history', 300)">{{tileText["history"][2]}}</p>

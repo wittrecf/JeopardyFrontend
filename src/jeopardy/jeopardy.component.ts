@@ -26,6 +26,8 @@ export class JeopardyComponent {
     "television": ["100", "200", "300", "400", "500"]
   };
 
+  private score: number = 0;
+
   constructor (private httpService: JeopardyService, private modalService: NgbModal) {
     // Creates a seeded value for each box
     Object.keys(this.questionSeeds).forEach(function(category){
@@ -41,6 +43,7 @@ export class JeopardyComponent {
 
     modalRef.result.then((result) => {
       console.log(result);
+      this.score += Number.parseInt(result);
     }).catch((error) => {
       console.log(error);
     });
@@ -48,7 +51,7 @@ export class JeopardyComponent {
 
   // Calls the Jeopardy service to retrieve the appropriate data from the backend
   onClick(category, score) {
-    if (this.tileText[category][(parseInt(score) / 100) - 1] !== "") {
+    if (this.tileText[category][(parseInt(score) / 100) - 1] !== "" && (this.tileText[category][(parseInt(score) / 100) - 1] === "100" || this.tileText[category][(parseInt(score) / 100) - 2] === "")) {
       this.tileText[category][(parseInt(score) / 100) - 1] = "";
       this.httpService.getData(category, score).subscribe(data => {
         this.openQuestionModal(data[this.questionSeeds[category][score]]);

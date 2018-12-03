@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { JeopardyComponent } from '../jeopardy/jeopardy.component';
 
 @Component({
   selector: 'app-question-modal',
@@ -19,6 +20,8 @@ export class QuestionModalComponent implements OnInit {
   Spot4: string;
   Result = ["", "", "", ""];
   randNumb: number;
+  exitScore: number = 0;
+  canExit:boolean = false;
 
   constructor(public activeModal: NgbActiveModal) {
   }
@@ -85,15 +88,23 @@ export class QuestionModalComponent implements OnInit {
   }
 
   closeModal() {
-    this.activeModal.close('Modal Closed');
+    this.activeModal.close(this.exitScore);
   }
 
   onClick(num) {
     if (this.Result[0] === this.Result[1] && this.Result[1] === this.Result[2] && this.Result[2] == this.Result[3]) {
       if (num !== this.randNumb + 1) {
         this.Result[num - 1] = "incorrect";
+        this.exitScore = -this.data["score"];
+      } else {
+        this.exitScore = this.data["score"];
       }
-      this.Result[this.randNumb] = "correct"
+      this.Result[this.randNumb] = "correct";
+      this.canExit = true;
     }
+  }
+
+  checkCanExit() {
+      return this.canExit;
   }
 }
